@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+/*========== Movie List ================*/
+
+.movie-list {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 20px;
+  margin: 20px;
+}
+.movie-card {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 1px 0px 6px 2px #aaa;
+  margin: 10px;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  a {
+    padding: 8px;
+    background-color: #0075ff;
+    color: #fff;
+    margin: 3px;
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+  }
+}
+.movie-card:hover {
+  scale: 1.1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.movie-card h3 {
+  font-size: 25px;
+  span {
+    color: #0075ff;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-card p {
+  padding: 8px 0;
+  span {
+    color: #0075ff;
+    font-size: 20px;
+  }
+}
+
+/*============ Filter ===========*/
+
+.filter {
+  margin-bottom: 16px;
+}
+
+.filter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #0056b3;
+}
+
+/* ============ MovieForm =============== */
+
+.movie-form {
+  margin-bottom: 16px;
+}
+
+.movie-form input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+/* Button styles */
+button {
+  display: block;
+  padding: 13px 28px;
+  margin: auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input styles */
+input {
+  width: 150px;
+  margin-left: 9px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ============= Description Page ============ */
+.desc-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  align-items: center;
+  margin-top: 200px;
+  button {
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
-  to {
-    transform: rotate(360deg);
+  iframe {
+    padding: 20px 0;
+    width: 50%;
+    height: 40vh;
   }
 }
